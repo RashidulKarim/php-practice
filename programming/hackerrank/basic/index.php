@@ -16,8 +16,8 @@ function gradingStudents($grades) {
             $grades[$i] = $grades[$i] + (ceil($grades[$i] / 5) * 5 - $grades[$i]);
         }
     }
+    
     return $grades;
-
 }
 
 $fptr = fopen("output.txt", "w");
