@@ -12,23 +12,21 @@
  */
 
 function kangaroo($x1, $v1, $x2, $v2) {
-    $kangaroo1 = $x1 + $v1;
-    $kangaroo2 = $x2 + $v2;
 
     if(($x1 > $x2 && $v1 > $v2) || ($x1 < $x2 && $v1 < $v2)){
         return "NO";
-    }elseif ($kangaroo1 % $kangaroo2 === 0 || $kangaroo2 % $kangaroo1 === 0){
-        return "YES";
     }
-    
+
     $x = 1;
 
     while($x <= 10000) {
-    if($x1 + $v1 * $x === $x2 + $v2 * $x){
-        return "YES";
+        if ( $x1 + $v1 * $x === $x2 + $v2 * $x ) {
+
+            return "YES";
+        }
+        $x++;
     }
-    $x++;
-    }
+
     return "NO";
 }
 
