@@ -10,8 +10,36 @@
  */
 
 function getTotalX($a, $b) {
-   
+   $count = 0;
+   for($i = $a[0]; $i <= $b[count($b)-1]; $i++){
+    $tag = false; 
+    $tag = ItemDivided($a, $i);
+    if($tag){
+        $tag = ItemDivisor($b, $i);
+        if($tag){
+            $count++;
+        }
+    }
+   }
+   return $count;
+}
 
+function ItemDivided ($a, $i){
+    foreach($a as $value){
+        if($i % $value != 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+function ItemDivisor ($b, $i){
+    foreach($b as $value){
+        if($value % $i != 0){
+            return false;
+        }
+    }
+    return true;
 }
 
 $fptr = fopen(("output.txt"), "w");
@@ -35,5 +63,3 @@ $total = getTotalX($arr, $brr);
 fwrite($fptr, $total . "\n");
 
 fclose($fptr);
-``
-[]
