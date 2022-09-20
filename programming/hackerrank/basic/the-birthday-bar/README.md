@@ -2,7 +2,7 @@
 
 #### Problem
 
-    https://www.hackerrank.com/challenges/kangaroo/problem?isFullScreen=true
+    https://www.hackerrank.com/challenges/the-birthday-bar/problem?h_r=next-challenge&h_v=zen&isFullScreen=true
 
 #### Status
 

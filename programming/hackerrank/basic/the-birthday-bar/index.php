@@ -11,8 +11,19 @@
  */
 
 function birthday($s, $d, $m) {
-    
-
+    $count = 0;
+    for($j= 0; $j < count($s); $j++){
+        $sum = 0;
+        if(count($s) - $j >= $m){
+            for($z= 0; $z < $m; $z++){
+            $sum += $s[$j+ $z];
+            }
+        }
+        if($sum === $d){
+            $count++;
+        }
+    }
+    return $count;
 }
 
 $fptr = fopen("output.txt", "w");
@@ -34,4 +45,3 @@ $result = birthday($s, $d, $m);
 fwrite($fptr, $result . "\n");
 
 fclose($fptr);
-\
